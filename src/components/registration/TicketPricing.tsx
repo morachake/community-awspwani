@@ -6,7 +6,7 @@ const tickets = [
     price: 250,
     features: [
       'Full conference access',
-      'Swag bag',
+      'Swag ',
       'Lunch and refreshments',
       'Access to networking session'
     ],
@@ -17,7 +17,7 @@ const tickets = [
     price: 300,
     features: [
       'Full conference access',
-      'Swag bag',
+      'Swag ',
       'Lunch and refreshments',
       'Access to networking session'
     ],
@@ -28,7 +28,7 @@ const tickets = [
     price: 500,
     features: [
       'Full conference access',
-      'Swag bag',
+      'Swag ',
       'Lunch and refreshments',
       'Access to networking session',
       'Priority seating'
