@@ -6,7 +6,6 @@ export default function Home() {
 
   return (
     <div>
-      {/* Hero Section */}
       <div className="bg-[#232F3E] text-white relative overflow-hidden min-h-screen">
         <div className="absolute inset-0 z-0">
           {/* <Image
@@ -71,8 +70,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-
-        {/* Floating Highlights */}
         <div className="relative z-10 container mx-auto px-4 -mt-20 mb-12">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
@@ -104,8 +101,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
-      {/* About Section */}
       <div className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -136,8 +131,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
-      {/* Call to Action */}
       <div className="bg-[#232F3E] text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">Join Us at AWS Community Day Pwani 2025</h2>
