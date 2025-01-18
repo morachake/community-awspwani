@@ -1,6 +1,3 @@
-'use client'
-
-import React from 'react'
 import CountdownTimer from '../components/shared/CountDown'
 import { Calendar, MapPin, Users, Star, Coffee, Laptop, ArrowRight } from 'lucide-react'
 
