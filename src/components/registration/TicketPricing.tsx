@@ -14,7 +14,7 @@ const tickets = [
   },
   {
     type: 'Regular',
-    price: 300,
+    price: 350,
     features: [
       'Full conference access',
       'Swag ',
@@ -47,7 +47,7 @@ const TicketPricing = ({ onSelectTicket }: { onSelectTicket: (price: number) => 
         >
           <h3 className="text-xl font-bold mb-2">{ticket.type}</h3>
           <p className="text-3xl font-bold text-[#FF9900] mb-4">
-            KES {ticket.price}
+            KES 
           </p>
           <ul className="space-y-3 mb-6">
             {ticket.features.map((feature, featureIndex) => (

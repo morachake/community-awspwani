@@ -1,36 +1,55 @@
 
 export default function SponsorUsPage() {
-  const sponsorshipPackages = [
+    const sponsorshipPackages = [
+      {
+        name: 'Platinum',
+        price: 'KES ',
+        benefits: [
+          'Exclusive keynote acknowledgment',
+          'Prime logo placement on all event materials, website, and signage',
+          'Dedicated booth in the main foyer',
+          '10 complimentary passes for your team',
+          'Brand inclusion on attendee lanyards and promotional items',
+          'Opportunity for a 30-minute technical talk reviewed by our organizing team',
+          '4 Slots Available',
+        ],
+      },
+      {
+        name: 'Gold',
+        price: 'KES ',
+        benefits: [
+          'Acknowledgment during keynotes',
+          'Logo placement on all event materials and website',
+          'Dedicated booth in a prominent location',
+          '5 complimentary passes for your team',
+          'Shout-outs on event social media channels',
+          '6 Slots Available',
+        ],
+      },
+      {
+        name: 'Silver',
+        price: 'KES ',
+        benefits: [
+          'Logo placement on the event website and materials',
+          'Acknowledgment during keynotes',
+          '3 complimentary passes for your team',
+          'Social media mentions',
+          '8 Slots Available',
+        ],
+      },
+    ]
+
+
+  const additionalPackages = [
     {
-      name: 'Platinum',
-      price: '$5,000',
+      name: 'Additional Opportunities',
+      price: 'Custom Pricing',
       benefits: [
-        'Prime logo placement on all event materials',
-        '10-minute keynote speaking opportunity',
-        'Dedicated booth space',
-        '5 complimentary event tickets',
-        'Social media promotion',
-      ],
-    },
-    {
-      name: 'Gold',
-      price: '$3,000',
-      benefits: [
-        'Logo placement on event materials',
-        '5-minute lightning talk',
-        'Booth space',
-        '3 complimentary event tickets',
-        'Social media mention',
-      ],
-    },
-    {
-      name: 'Silver',
-      price: '$1,500',
-      benefits: [
-        'Logo on event website',
-        'Booth space',
-        '2 complimentary event tickets',
-        'Acknowledgment during opening remarks',
+        'Networking Coffee Break - KES ',
+        'Lunch Sponsorship - KES (Includes branded materials on tables)',
+        'Attendee Swag - KES  (Water bottles, notebooks, branded gifts)',
+        'Workshop Sponsorship - KES  (Includes branding in workshop areas)',
+        'T-Shirts - KES ',
       ],
     },
   ]
@@ -52,12 +71,28 @@ export default function SponsorUsPage() {
                   <li key={index} className="mb-2">{benefit}</li>
                 ))}
               </ul>
-              {/* <Link
-                href="/contact"
+              <button
                 className="block text-center bg-[#FF9900] text-white px-4 py-2 rounded-md font-semibold hover:bg-[#FF9900]/90 transition-colors"
               >
                 Contact Us
-              </Link> */}
+              </button>
+            </div>
+          ))}
+        </div>
+        <div className="grid grid-cols-1 mt-8">
+          {additionalPackages.map((pkg) => (
+            <div key={pkg.name} className="border rounded-lg p-6 shadow-md">
+              <h2 className="text-2xl font-semibold mb-4">{pkg.name}</h2>
+              <ul className="list-disc list-inside mb-6">
+                {pkg.benefits.map((benefit, index) => (
+                  <li key={index} className="mb-2">{benefit}</li>
+                ))}
+              </ul>
+              <button
+                className="block text-center bg-[#FF9900] text-white px-4 py-2 rounded-md font-semibold hover:bg-[#FF9900]/90 transition-colors"
+              >
+                Contact Us
+              </button>
             </div>
           ))}
         </div>
@@ -65,12 +100,6 @@ export default function SponsorUsPage() {
           <p className="text-xl mb-4">
             Don't see a package that fits your needs? We're happy to create custom sponsorship packages.
           </p>
-          {/* <Link
-            href="/contact"
-            className="inline-block bg-[#232F3E] text-white px-8 py-3 rounded-md font-semibold hover:bg-[#232F3E]/90 transition-colors"
-          >
-            Contact Us for Custom Packages
-          </Link> */}
         </div>
       </div>
     </div>
