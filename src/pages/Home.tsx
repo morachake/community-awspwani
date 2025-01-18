@@ -108,39 +108,6 @@ export default function Home() {
         </div>
       </div>
 
-
-      {/* Event Details */}
-      <div className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="flex items-center space-x-4 p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <Calendar className="h-10 w-10 text-[#FF9900]" />
-              <div>
-                <h3 className="font-semibold text-lg">Date & Time</h3>
-                <p className="text-gray-600">April 26th, 2025</p>
-                <p className="text-gray-600">9:00 AM - 5:00 PM</p>
-              </div>
-            </div>
-            <div className="flex items-center space-x-4 p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <MapPin className="h-10 w-10 text-[#FF9900]" />
-              <div>
-                <h3 className="font-semibold text-lg">Location</h3>
-                <p className="text-gray-600">Pwani Convention Center</p>
-                <p className="text-gray-600">Pwani, Kenya</p>
-              </div>
-            </div>
-            <div className="flex items-center space-x-4 p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <Users className="h-10 w-10 text-[#FF9900]" />
-              <div>
-                <h3 className="font-semibold text-lg">Attendees</h3>
-                <p className="text-gray-600">500+ Expected</p>
-                <p className="text-gray-600">Cloud Enthusiasts</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* About Section */}
       <div className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
