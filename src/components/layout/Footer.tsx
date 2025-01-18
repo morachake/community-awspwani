@@ -30,8 +30,8 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <ul className="space-y-2">
-              <li className="text-gray-300">Pwani, Kenya</li>
-              <li className="text-gray-300">info@awscommunitydaypwani.com</li>
+              <li className="text-gray-300">Mombasa, Kenya</li>
+              <li className="text-gray-300">awspwaniug@gmail.com</li>
             </ul>
           </div>
           
@@ -53,7 +53,7 @@ const Footer = () => {
         
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
           <p className="text-gray-300">
-            © {new Date().getFullYear()} AWS Community Day Pwani. All rights reserved.
+            © {new Date().getFullYear()} AWS USer Group Pwani. All rights reserved.
           </p>
         </div>
       </div>

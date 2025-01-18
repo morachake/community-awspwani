@@ -1,6 +1,13 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { Circle } from 'lucide-react'
+
+interface TimeUnit {
+  value: number
+  label: string
+  color: string
+}
 
 const CountdownTimer = ({ targetDate }: { targetDate: Date }) => {
   const [timeLeft, setTimeLeft] = useState({
@@ -30,12 +37,43 @@ const CountdownTimer = ({ targetDate }: { targetDate: Date }) => {
     return () => clearInterval(timer)
   }, [targetDate])
 
+  const timeUnits: TimeUnit[] = [
+    { value: timeLeft.days, label: 'Days', color: 'rgb(236, 72, 153)' }, // Pink
+    { value: timeLeft.hours, label: 'Hours', color: 'rgb(59, 130, 246)' }, // Blue
+    { value: timeLeft.minutes, label: 'Minutes', color: 'rgb(249, 115, 22)' }, // Orange
+    { value: timeLeft.seconds, label: 'Seconds', color: 'rgb(139, 92, 246)' }, // Purple
+  ]
+
   return (
-    <div className="flex justify-center space-x-4 text-white">
-      {Object.entries(timeLeft).map(([key, value]) => (
-        <div key={key} className="text-center">
-          <div className="text-4xl font-bold">{value}</div>
-          <div className="text-sm uppercase">{key}</div>
+    <div className="flex flex-wrap justify-center gap-8">
+      {timeUnits.map((unit) => (
+        <div key={unit.label} className="relative w-24 h-24">
+          {/* Background circle */}
+          <svg className="w-full h-full -rotate-90">
+            <circle
+              cx="48"
+              cy="48"
+              r="45"
+              fill="transparent"
+              stroke="rgba(255,255,255,0.1)"
+              strokeWidth="6"
+            />
+            {/* Progress circle */}
+            <circle
+              cx="48"
+              cy="48"
+              r="45"
+              fill="transparent"
+              stroke={unit.color}
+              strokeWidth="6"
+              strokeDasharray={`${(unit.value / (unit.label === 'Days' ? 365 : unit.label === 'Hours' ? 24 : 60)) * 283} 283`}
+            />
+          </svg>
+          {/* Number and label */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
+            <div className="text-2xl font-bold text-white">{unit.value}</div>
+            <div className="text-xs text-gray-300">{unit.label}</div>
+          </div>
         </div>
       ))}
     </div>

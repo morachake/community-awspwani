@@ -61,8 +61,8 @@ export default function Home() {
               <MapPin className="h-10 w-10 text-[#FF9900]" />
               <div>
                 <h3 className="font-semibold text-lg">Location</h3>
-                <p className="text-gray-600">Pwani Convention Center</p>
-                <p className="text-gray-600">Pwani, Kenya</p>
+                <p className="text-gray-600">TBA</p>
+                <p className="text-gray-600">Mombasa, Kenya</p>
               </div>
             </div>
             <div className="flex items-center space-x-4 p-6 bg-white rounded-lg shadow-md">
