@@ -21,75 +21,29 @@ const Schedule = () => {
     {
       time: '08:30 - 08:45',
       title: 'National Anthem & Opening Prayer',
-      track: 'keynote',
+      track: 'All',
       description: 'Official start of the event'
     },
     {
       time: '08:45 - 09:00',
       title: 'Welcome Address',
       speaker: 'Event Organizers',
-      track: 'keynote',
+      track: 'All',
       description: 'Opening remarks and event overview'
     },
-    {
-      time: '09:00 - 09:45',
-      title: 'Opening Keynote: Future of Cloud Computing',
-      speaker: 'Sarah Johnson - AWS Hero',
-      track: 'keynote',
-      description: 'Insights into the latest AWS innovations and future trends'
-    },
-    {
-      time: '10:00 - 11:00',
-      title: 'Serverless Architecture Patterns',
-      speaker: 'Michael Chen',
-      track: 'technical',
-      description: 'Deep dive into serverless architecture best practices'
-    },
-    {
-      time: '11:15 - 12:15',
-      title: 'Cloud Security Best Practices',
-      speaker: 'Lisa Patel',
-      track: 'technical',
-      description: 'Essential security measures for AWS deployments'
-    },
+   
     {
       time: '12:15 - 13:15',
       title: 'Lunch Break & Networking',
       track: 'all',
       description: 'Enjoy lunch and network with fellow attendees'
     },
-    {
-      time: '13:15 - 14:15',
-      title: 'Cost Optimization Workshop',
-      speaker: 'James Wilson',
-      track: 'workshop',
-      description: 'Hands-on session on AWS cost optimization'
-    },
-    {
-      time: '14:30 - 15:30',
-      title: 'Building for Scale',
-      speaker: 'Emma Rodriguez',
-      track: 'technical',
-      description: 'Strategies for scaling applications on AWS'
-    },
-    {
-      time: '15:45 - 16:45',
-      title: 'Cloud Migration Strategies',
-      speaker: 'David Kim',
-      track: 'business',
-      description: 'Planning and executing successful cloud migrations'
-    },
-    {
-      time: '16:45 - 17:15',
-      title: 'Closing Keynote',
-      speaker: 'AWS Community Leaders',
-      track: 'keynote',
-      description: 'Event wrap-up and future community initiatives'
-    },
+    
+   
     {
       time: '17:15 - 17:30',
       title: 'Closing Remarks & Vote of Thanks',
-      track: 'keynote',
+      track: 'All',
       description: 'Final words and acknowledgments'
     }
   ];
@@ -104,7 +58,7 @@ const Schedule = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl font-bold text-center mb-4">Event Schedule</h1>
           <p className="text-center text-gray-300 max-w-2xl mx-auto">
-            April 13th, 2024 | 8:00 AM - 5:30 PM
+            April 26th, 2025 | 8:00 AM - 5:30 PM
           </p>
         </div>
       </div>

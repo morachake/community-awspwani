@@ -1,57 +1,58 @@
 import React from 'react';
 import { Mail } from 'lucide-react';
+import SponsorUsPage from '../components/shared/SponsorUs';
 
 const sponsorTiers = [
-  {
-    tier: 'Platinum',
-    sponsors: [
-      {
-        name: 'TechCorp Solutions',
-        logo: 'https://source.unsplash.com/random/400x200?tech&sig=1',
-        description: 'Leading provider of cloud solutions'
-      },
-      {
-        name: 'CloudTech Systems',
-        logo: 'https://source.unsplash.com/random/400x200?technology&sig=2',
-        description: 'Enterprise cloud services'
-      }
-    ]
-  },
-  {
-    tier: 'Gold',
-    sponsors: [
-      {
-        name: 'DevOps Pro',
-        logo: 'https://source.unsplash.com/random/400x200?computer&sig=3',
-        description: 'DevOps automation platform'
-      },
-      {
-        name: 'Security Plus',
-        logo: 'https://source.unsplash.com/random/400x200?security&sig=4',
-        description: 'Cloud security solutions'
-      },
-      {
-        name: 'DataFlow Inc',
-        logo: 'https://source.unsplash.com/random/400x200?data&sig=5',
-        description: 'Big data analytics'
-      }
-    ]
-  },
-  {
-    tier: 'Silver',
-    sponsors: [
-      {
-        name: 'StartUp Cloud',
-        logo: 'https://source.unsplash.com/random/400x200?startup&sig=6',
-        description: 'Cloud solutions for startups'
-      },
-      {
-        name: 'CodeMasters',
-        logo: 'https://source.unsplash.com/random/400x200?code&sig=7',
-        description: 'Development tools'
-      }
-    ]
-  }
+  // {
+  //   tier: 'Platinum',
+  //   sponsors: [
+  //     {
+  //       name: 'TechCorp Solutions',
+  //       logo: 'https://source.unsplash.com/random/400x200?tech&sig=1',
+  //       description: 'Leading provider of cloud solutions'
+  //     },
+  //     {
+  //       name: 'CloudTech Systems',
+  //       logo: 'https://source.unsplash.com/random/400x200?technology&sig=2',
+  //       description: 'Enterprise cloud services'
+  //     }
+  //   ]
+  // },
+  // {
+  //   tier: 'Gold',
+  //   sponsors: [
+  //     {
+  //       name: 'DevOps Pro',
+  //       logo: 'https://source.unsplash.com/random/400x200?computer&sig=3',
+  //       description: 'DevOps automation platform'
+  //     },
+  //     {
+  //       name: 'Security Plus',
+  //       logo: 'https://source.unsplash.com/random/400x200?security&sig=4',
+  //       description: 'Cloud security solutions'
+  //     },
+  //     {
+  //       name: 'DataFlow Inc',
+  //       logo: 'https://source.unsplash.com/random/400x200?data&sig=5',
+  //       description: 'Big data analytics'
+  //     }
+  //   ]
+  // },
+  // {
+  //   tier: 'Silver',
+  //   sponsors: [
+  //     {
+  //       name: 'StartUp Cloud',
+  //       logo: 'https://source.unsplash.com/random/400x200?startup&sig=6',
+  //       description: 'Cloud solutions for startups'
+  //     },
+  //     {
+  //       name: 'CodeMasters',
+  //       logo: 'https://source.unsplash.com/random/400x200?code&sig=7',
+  //       description: 'Development tools'
+  //     }
+  //   ]
+  // }
 ];
 
 const Sponsors = () => {
@@ -67,7 +68,7 @@ const Sponsors = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        {sponsorTiers.map((tier, tierIndex) => (
+        {sponsorTiers?.map((tier, tierIndex) => (
           <div key={tierIndex} className="mb-16">
             <h2 className="text-2xl font-bold mb-8 text-center">
               <span className="border-b-4 border-[#FF9900] pb-2">
@@ -94,7 +95,7 @@ const Sponsors = () => {
             </div>
           </div>
         ))}
-
+        <SponsorUsPage/>
         <div className="mt-16 bg-gray-50 rounded-lg p-8 text-center">
           <h2 className="text-2xl font-bold mb-4">Become a Sponsor</h2>
           <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
