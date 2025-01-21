@@ -1,41 +1,7 @@
+import { tickets } from '@/utilis/data';
 import React from 'react';
 
-const tickets = [
-  {
-    type: 'Early Bird',
-    price: 250,
-    features: [
-      'Full conference access',
-      'Swag ',
-      'Lunch and refreshments',
-      'Access to networking session'
-    ],
-    available: true
-  },
-  {
-    type: 'Regular',
-    price: 350,
-    features: [
-      'Full conference access',
-      'Swag ',
-      'Lunch and refreshments',
-      'Access to networking session'
-    ],
-    available: true
-  },
-  {
-    type: 'Late Bird',
-    price: 500,
-    features: [
-      'Full conference access',
-      'Swag ',
-      'Lunch and refreshments',
-      'Access to networking session',
-      'Priority seating'
-    ],
-    available: true
-  }
-];
+
 
 const TicketPricing = ({ onSelectTicket }: { onSelectTicket: (price: number) => void }) => {
   return (
