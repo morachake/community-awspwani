@@ -8,22 +8,14 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { navigation ,years} from '@/utilis/data';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedYear, setSelectedYear] = useState('2024');
   const location = useLocation();
 
-  const years = ['2020', '2021', '2022', '2023', '2024'];
-
-  const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'Speakers', href: '/speakers' },
-    { name: 'Schedule', href: '/schedule' },
-    { name: 'Sponsors', href: '/sponsors' },
-    { name: 'Volunteers', href: '/volunteers' },
-    { name: 'Register', href: '/register' },
-  ];
+  
 
   const isActive = (path: string) => location.pathname === path;
 
