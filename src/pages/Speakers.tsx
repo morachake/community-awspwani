@@ -1,16 +1,7 @@
 import React from 'react';
 import { Calendar, Clock, Users, Award, Lightbulb, Zap } from 'lucide-react'
+import { speakers, tracks } from '@/utilis/data';
 
-const speakers = [
-];
-const tracks = [
-  { name: 'Serverless', icon: Zap },
-  { name: 'Containers', icon: Users },
-  { name: 'Machine Learning', icon: Lightbulb },
-  { name: 'DevOps', icon: Clock },
-  { name: 'Security', icon: Award },
-  { name: 'Networking', icon: Calendar },
-]
 
 const Speakers = () => {
   return (

@@ -1,3 +1,5 @@
+import { Calendar, Clock, Users, Award, Lightbulb, Zap } from 'lucide-react'
+
 export const years = ['2020', '2021', '2022', '2023', '2024'];
 
 export  const navigation = [
@@ -98,4 +100,69 @@ export const additionalPackages = [
       'T-Shirts - KES ',
     ],
   },
+]
+
+
+export const sponsorTiers = [
+//   {
+//     tier: 'Platinum',
+//     sponsors: [
+//       {
+//         name: 'TechCorp Solutions',
+//         logo: 'https://source.unsplash.com/random/400x200?tech&sig=1',
+//         description: 'Leading provider of cloud solutions'
+//       },
+//       {
+//         name: 'CloudTech Systems',
+//         logo: 'https://source.unsplash.com/random/400x200?technology&sig=2',
+//         description: 'Enterprise cloud services'
+//       }
+//     ]
+//   },
+  // {
+  //   tier: 'Gold',
+  //   sponsors: [
+  //     {
+  //       name: 'DevOps Pro',
+  //       logo: 'https://source.unsplash.com/random/400x200?computer&sig=3',
+  //       description: 'DevOps automation platform'
+  //     },
+  //     {
+  //       name: 'Security Plus',
+  //       logo: 'https://source.unsplash.com/random/400x200?security&sig=4',
+  //       description: 'Cloud security solutions'
+  //     },
+  //     {
+  //       name: 'DataFlow Inc',
+  //       logo: 'https://source.unsplash.com/random/400x200?data&sig=5',
+  //       description: 'Big data analytics'
+  //     }
+  //   ]
+  // },
+  // {
+  //   tier: 'Silver',
+  //   sponsors: [
+  //     {
+  //       name: 'StartUp Cloud',
+  //       logo: 'https://source.unsplash.com/random/400x200?startup&sig=6',
+  //       description: 'Cloud solutions for startups'
+  //     },
+  //     {
+  //       name: 'CodeMasters',
+  //       logo: 'https://source.unsplash.com/random/400x200?code&sig=7',
+  //       description: 'Development tools'
+  //     }
+  //   ]
+  // }
+];
+
+export const speakers = [
+];
+export const tracks = [
+  { name: 'Serverless', icon: Zap },
+  { name: 'Containers', icon: Users },
+  { name: 'Machine Learning', icon: Lightbulb },
+  { name: 'DevOps', icon: Clock },
+  { name: 'Security', icon: Award },
+  { name: 'Networking', icon: Calendar },
 ]
