@@ -29,8 +29,6 @@ const Navbar = () => {
 
   const handleYearChange = (value: string) => {
     setSelectedYear(value);
-    // Here you can add logic to change the content based on the selected year
-    // For example, updating the route or fetching new data
   };
 
   return (
@@ -61,13 +59,17 @@ const Navbar = () => {
               ))}
               
               <Select value={selectedYear} onValueChange={handleYearChange}>
-                <SelectTrigger className="w-24 bg-transparent text-gray-300 border-gray-600 focus:ring-[#FF9900]">
-                  <SelectValue placeholder="Select year" />
+                <SelectTrigger className="w-32 bg-transparent text-gray-300 border-2 border-[#FF9900] rounded-md hover:bg-[#FF9900] hover:text-white transition-colors focus:ring-2 focus:ring-[#FF9900] focus:ring-offset-2 focus:ring-offset-[#232F3E]">
+                  <SelectValue placeholder="Edition" />
                 </SelectTrigger>
-                <SelectContent>
+                <SelectContent className="bg-[#232F3E] border-2 border-[#FF9900] text-gray-300">
                   {years.map((year) => (
-                    <SelectItem key={year} value={year}>
-                      {year} Edition
+                    <SelectItem 
+                      key={year} 
+                      value={year}
+                      className="hover:bg-[#FF9900] hover:text-white focus:bg-[#FF9900] focus:text-white cursor-pointer"
+                    >
+                      {year}
                     </SelectItem>
                   ))}
                 </SelectContent>
@@ -78,7 +80,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-[#FF9900] border-1 border-1-[#FF9900] focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-[#FF9900] border-2 border-[#FF9900] focus:outline-none"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -105,13 +107,18 @@ const Navbar = () => {
             ))}
             
             <Select value={selectedYear} onValueChange={handleYearChange}>
-              <SelectTrigger className="w-full bg-transparent text-gray-300 border-gray-600 focus:ring-[#FF9900] mt-2">
-                <SelectValue placeholder="Select year" />
+              <SelectTrigger className="w-full bg-transparent text-gray-300 border-2 border-[#FF9900] rounded-md hover:bg-[#FF9900] hover:text-white transition-colors focus:ring-2 focus:ring-[#FF9900] focus:ring-offset-2 focus:ring-offset-[#232F3E] mt-2">
+                <SelectValue placeholder="Edition" />
               </SelectTrigger>
-              <SelectContent>
+              <SelectContent className="bg-[#232F3E] border-2 border-[#FF9900] text-gray-300">
                 {years.map((year) => (
-                  <SelectItem key={year} value={year}>
-                    {year} Edition
+                  <SelectItem 
+                    key={year} 
+                    value={year}
+                    defaultValue="Edition"
+                    className="hover:bg-[#FF9900] hover:text-white focus:bg-[#FF9900] focus:text-white cursor-pointer"
+                  >
+                    {year}
                   </SelectItem>
                 ))}
               </SelectContent>
