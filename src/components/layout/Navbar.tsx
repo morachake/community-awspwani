@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, X, CloudLightning, ChevronDown } from 'lucide-react';
+import { Menu, X, CloudLightning } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import {
   Select,
@@ -78,7 +78,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-[#FF9900] focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-[#FF9900] border-1 border-1-[#FF9900] focus:outline-none"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
