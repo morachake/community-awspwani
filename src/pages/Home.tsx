@@ -1,3 +1,4 @@
+import { eventData } from '@/utilis/data'
 import CountdownTimer from '../components/shared/CountDown'
 import { Calendar, MapPin, Users, Star, Coffee, Laptop, ArrowRight } from 'lucide-react'
 
@@ -22,7 +23,7 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-center lg:text-left space-y-6">
               <div className="inline-block bg-[#FF9900]/10 px-4 py-2 rounded-full">
-                <span className="text-[#FF9900] font-semibold">April 26th, 2025 | Pwani, Kenya</span>
+                <span className="text-[#FF9900] font-semibold">{eventData.date}| Pwani, Kenya</span>
               </div>
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
                 AWS Community Day <span className="text-[#FF9900]">Pwani 2025</span>
@@ -50,19 +51,19 @@ export default function Home() {
                 <CountdownTimer targetDate={eventDate} />
                 <div className="grid grid-cols-2 gap-4 text-center">
                   <div className="bg-white/5 rounded-lg p-4">
-                    <div className="text-3xl font-bold text-[#FF9900]">500+</div>
+                    <div className="text-3xl font-bold text-[#FF9900]">{eventData.attendees}+</div>
                     <div className="text-sm text-gray-300">Attendees</div>
                   </div>
                   <div className="bg-white/5 rounded-lg p-4">
-                    <div className="text-3xl font-bold text-[#FF9900]">20+</div>
+                    <div className="text-3xl font-bold text-[#FF9900]">{eventData.speakers}+</div>
                     <div className="text-sm text-gray-300">Speakers</div>
                   </div>
                   <div className="bg-white/5 rounded-lg p-4">
-                    <div className="text-3xl font-bold text-[#FF9900]">20+</div>
+                    <div className="text-3xl font-bold text-[#FF9900]">{eventData.sessions}+</div>
                     <div className="text-sm text-gray-300">Sessions</div>
                   </div>
                   <div className="bg-white/5 rounded-lg p-4">
-                    <div className="text-3xl font-bold text-[#FF9900]">6+</div>
+                    <div className="text-3xl font-bold text-[#FF9900]">{eventData.tracks}+</div>
                     <div className="text-sm text-gray-300">Tracks</div>
                   </div>
                 </div>
@@ -75,28 +76,28 @@ export default function Home() {
             <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
               <Calendar className="h-8 w-8 text-[#FF9900] mb-4" />
               <h3 className="font-semibold text-lg mb-2">Date & Time</h3>
-              <p className="text-gray-300">April 26th, 2025</p>
-              <p className="text-gray-300">9:00 AM - 5:00 PM</p>
+              <p className="text-gray-300">{eventData.date}</p>
+              <p className="text-gray-300">{eventData.time}</p>
             </div>
             <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
               <MapPin className="h-8 w-8 text-[#FF9900] mb-4" />
-              <h3 className="font-semibold text-lg mb-2">Location</h3>
+              <h3 className="font-semibold text-lg mb-2">{eventData.venue}</h3>
               <p className="text-gray-300">TBA</p>
-              <p className="text-gray-300">Mombasa, Kenya</p>
+              <p className="text-gray-300">{eventData.country}</p>
             </div>
             <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
               <Users className="h-8 w-8 text-[#FF9900] mb-4" />
               <h3 className="font-semibold text-lg mb-2">Attendees</h3>
-              <p className="text-gray-300">500+ Expected</p>
+              <p className="text-gray-300">{eventData.attendees}+Expected</p>
               <p className="text-gray-300">Attendees</p>
             </div>
             <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
               <Star className="h-8 w-8 text-[#FF9900] mb-4" />
-              <h3 className="font-semibold text-lg mb-2">Experience</h3>
-              <p className="text-gray-300">Hands-on Workshops</p>
-              <p className="text-gray-300">Networking Events</p>
-              <p className="text-gray-300">Panel Discussion</p>
-              <p className="text-gray-300">Keynotes</p>
+              {
+                eventData.experience.map((item, index) => (
+                  <p key={index} className="text-gray-300">{item}</p>
+                ))
+              }
             </div>
           </div>
         </div>

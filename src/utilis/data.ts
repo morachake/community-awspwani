@@ -166,3 +166,62 @@ export const tracks = [
   { name: 'Security', icon: Award },
   { name: 'Networking', icon: Calendar },
 ]
+
+
+export const sessioTracks = [
+  { id: 'all', name: 'All Tracks' },
+  { id: 'keynote', name: 'Keynote' },
+  { id: 'technical', name: 'Technical' },
+  { id: 'business', name: 'Business' },
+  { id: 'workshop', name: 'Workshops' }
+];
+
+export const sessions = [
+  {
+    time: '08:00 - 08:30',
+    title: 'Registration & Check-in',
+    track: 'all',
+    description: 'Pick up your badge and conference materials'
+  },
+  {
+    time: '08:30 - 08:45',
+    title: 'National Anthem & Opening Prayer',
+    track: 'All',
+    description: 'Official start of the event'
+  },
+  {
+    time: '08:45 - 09:00',
+    title: 'Welcome Address',
+    speaker: 'Event Organizers',
+    track: 'All',
+    description: 'Opening remarks and event overview'
+  },
+ 
+  {
+    time: '12:15 - 13:15',
+    title: 'Lunch Break & Networking',
+    track: 'all',
+    description: 'Enjoy lunch and network with fellow attendees'
+  },
+  
+ 
+  {
+    time: '17:15 - 17:30',
+    title: 'Closing Remarks & Vote of Thanks',
+    track: 'All',
+    description: 'Final words and acknowledgments'
+  }
+];
+
+export const eventData = {
+  venue: 'Mombasa  ',
+  address: 'Mombasa',
+  country: 'Kenya',
+  date: 'April 26th, 2025',
+  time: '9:00 AM - 5:00 PM',
+  attendees: '500',
+  speakers: '20',
+  sessions: '20',
+  tracks: '6',
+  experience: ['Hands-on Workshops', 'Networking Events', 'Panel Discussion', 'Keynotes']
+}

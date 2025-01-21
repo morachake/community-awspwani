@@ -1,52 +1,9 @@
+import { sessions, sessioTracks } from '@/utilis/data';
 import React, { useState } from 'react';
 
 const Schedule = () => {
   const [selectedTrack, setSelectedTrack] = useState('all');
 
-  const tracks = [
-    { id: 'all', name: 'All Tracks' },
-    { id: 'keynote', name: 'Keynote' },
-    { id: 'technical', name: 'Technical' },
-    { id: 'business', name: 'Business' },
-    { id: 'workshop', name: 'Workshops' }
-  ];
-
-  const sessions = [
-    {
-      time: '08:00 - 08:30',
-      title: 'Registration & Check-in',
-      track: 'all',
-      description: 'Pick up your badge and conference materials'
-    },
-    {
-      time: '08:30 - 08:45',
-      title: 'National Anthem & Opening Prayer',
-      track: 'All',
-      description: 'Official start of the event'
-    },
-    {
-      time: '08:45 - 09:00',
-      title: 'Welcome Address',
-      speaker: 'Event Organizers',
-      track: 'All',
-      description: 'Opening remarks and event overview'
-    },
-   
-    {
-      time: '12:15 - 13:15',
-      title: 'Lunch Break & Networking',
-      track: 'all',
-      description: 'Enjoy lunch and network with fellow attendees'
-    },
-    
-   
-    {
-      time: '17:15 - 17:30',
-      title: 'Closing Remarks & Vote of Thanks',
-      track: 'All',
-      description: 'Final words and acknowledgments'
-    }
-  ];
 
   const filteredSessions = selectedTrack === 'all'
     ? sessions
@@ -65,7 +22,7 @@ const Schedule = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="flex flex-wrap justify-center gap-4 mb-8">
-          {tracks.map((track) => (
+          {sessioTracks.map((track) => (
             <button
               key={track.id}
               onClick={() => setSelectedTrack(track.id)}
